@@ -1,21 +1,18 @@
 import {Container, Row, Col, Image} from 'react-bootstrap/';
-
+import Grafidolar_CityPorteña from '../../assets/Grafidolar_CityPorteña.png'
 function HomeText() {
   return (
    <Container>
     <Row className="px-4 my-5">
       <Col sm={7}>
-{/* 
+{
         <Image
-        src="https://picsum.photos/900/400"
+        src={Grafidolar_CityPorteña}
         fluid
         rounded
         className=""
         />
-*/ }
-        <h5> Placeholder blablablablablablabla</h5>
-
-
+ }
       </Col>
       <Col sm={5}>
         <h1>¿Qué ofrece Grafidolar?</h1>
@@ -26,11 +23,8 @@ function HomeText() {
       <br></br>
         <blockquote className="blockquote mb-0">
           <p>
-            
-  
           </p>
           <br></br>
-          
         </blockquote>
      
       </Container>

@@ -80,7 +80,7 @@ const RechartsDolarBlue = () =>{
         
         const valoresDecimatedByDate=dolarblue.filter(e=> compareDates(e.updatedAt));
         setValoresDecimated(valoresDecimatedByDate)
-        console.log("cambio de estado compdolarblue")
+        //console.log("cambio de estado compdolarblue")
         
     };
 fetchAPI();

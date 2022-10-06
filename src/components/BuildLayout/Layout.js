@@ -1,6 +1,6 @@
 import React from "react"
+import { lazy, Suspense } from "react";
 
-import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 
 
@@ -9,7 +9,11 @@ import HomeWrapper from "./HomeWrapper";
 import About from "./About/About";
 
 import {Route, Routes, HashRouter, NavLink } from "react-router-dom";
-import Header_GRAFIDOLAR from '../../assets/Header_GRAFIDOLAR.svg'
+import Grafidolar_Header from '../../assets/Grafidolar_Header.svg'
+import house_door_fill from '../../assets/house-door-fill.svg'
+
+
+//import Grafido from '../../assets/Header_GRAFIDOLAR.svg'
 
 function Layout(){
 
@@ -20,14 +24,12 @@ return(
 <ul className="siteheader">
 <li></li>
 <li><NavLink to="/">
-    <img
-    src={Header_GRAFIDOLAR}
+  <img
+src={Grafidolar_Header}
 
-
-    />
-    
-    
-    </NavLink></li>
+  />
+</NavLink></li>
+<li><NavLink className="hoverable" to={"/"}> <img src={house_door_fill} width={20} height={20}/> </NavLink></li>
 <li><NavLink className="hoverable"to="/about">Más info</NavLink></li>
 </ul>
 </Nav>

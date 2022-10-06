@@ -1,5 +1,5 @@
 import {Container, Row, Col, Image} from 'react-bootstrap/';
-import Grafidolar_CityPorteña from '../../assets/Grafidolar_CityPorteña.png'
+//import Grafidolar_CityPorteña from '../../assets/Grafidolar_CityPorteña.png'
 function HomeText() {
   return (
    <Container>
@@ -7,7 +7,7 @@ function HomeText() {
       <Col sm={7}>
 {
         <Image
-        src={Grafidolar_CityPorteña}
+        src="https://grafidolar-restapi.herokuapp.com/static/images/Grafidolar_CityPorteña.png"
         fluid
         rounded
         className=""

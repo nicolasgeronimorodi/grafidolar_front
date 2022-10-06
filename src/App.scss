@@ -66,6 +66,7 @@ display: inline-block;
 
 .hoverable:hover{
   background-color: black;
+  border-bottom: solid 4px rgb(184, 75, 12)
 }
 
 
@@ -109,7 +110,7 @@ thead{
   width: 100%;
   text-align: center;
   color:white;
-  background-color: black;
+  background-color: #1d1c18;
 }
 
 .tableHeader{

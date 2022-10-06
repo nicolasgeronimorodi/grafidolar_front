@@ -10,11 +10,11 @@ const Tooltip = lazy(() => import('recharts').then(module => ({ default: module.
 */
 
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer} from 'recharts';
-import {useState, useEffect, lazy, Suspense} from "react";
+import {useState, useEffect} from "react";
 import axios from "axios";
 import moment from 'moment';
 import 'moment-timezone'
-
+import { TailSpin } from 'react-loader-spinner';
 
 const RechartsDolarCCL=()=>{
     var days=86400000 
@@ -99,7 +99,17 @@ const RechartsDolarCCL=()=>{
         <>
         {
          isLoading ? (
-            <div>Loading...</div>
+                    
+<TailSpin
+  height="80"
+  width="80"
+  color="#4fa94d"
+  ariaLabel="tail-spin-loading"
+  radius="1"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+/>
          ):(
             <ResponsiveContainer width="95%" height="80%">
             <LineChart  data={dataDecimatedByDate}>

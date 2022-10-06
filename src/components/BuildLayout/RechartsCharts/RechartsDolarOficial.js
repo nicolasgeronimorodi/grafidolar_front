@@ -1,16 +1,4 @@
 
-/*
-const LineChart = lazy(() => import('recharts').then(module => ({ default: module.LineChart })));
-//const ResponsiveContainer = lazy(() => import('recharts').then(module => ({ default: module.ResponsiveContainer })));
-const Line = lazy(() => import('recharts').then(module => ({ default: module.Line })));
-const XAxis = lazy(() => import('recharts').then(module => ({ default: module.XAxis })));
-const YAxis = lazy(() => import('recharts').then(module => ({ default: module.YAxis })));
-const CartesianGrid = lazy(() => import('recharts').then(module => ({ default: module.CartesianGrid })));
-const Tooltip = lazy(() => import('recharts').then(module => ({ default: module.Tooltip })));
-//const ReferenceLine = lazy(() => import('recharts').then(module => ({ default: module.ReferenceLine })));
-*/
-
-
 
 
 
@@ -87,7 +75,7 @@ useEffect( ()=>
         
         const oficialDecimatedByDate=dolaroficial.filter(e=> compareDates(e.updatedAt));
         setOficialDecimated(oficialDecimatedByDate)
-        console.log("cambio de estado compdolaroficial")
+        //console.log("cambio de estado compdolaroficial")
     };
 fetchAPI();
 setIsLoading(false);
@@ -115,9 +103,9 @@ controller.abort()
   visible={true}
 />
      ):(
-        <ResponsiveContainer width="95%" height="80%">
+        <ResponsiveContainer width="100%" height="100%">
         <LineChart  data={dataDecimatedByDate}>
-        <Line type="monotone" dataKey="precio" stroke="#8884d8" strokeWidth={3} dot={false} />
+        <Line type="monotone" dataKey="precio" stroke="#055309" strokeWidth={3} dot={false} />
         <CartesianGrid stroke="#ccc" />
        
         <XAxis  dataKey="x" scale="time" type="number" tickFormatter={formatDateZone} domain={["dataMin", "dataMax"]}  />

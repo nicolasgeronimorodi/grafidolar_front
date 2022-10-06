@@ -1,4 +1,9 @@
+import { lazy, Suspense } from 'react';
 import {Container, Row, Col, Image} from 'react-bootstrap/';
+//import MainTextImage from '../../assets/assets_components/MainTextImage.JS';
+const MainTextImage = lazy( ()=>import('../MainTextImage.js') )
+
+
 //import Grafidolar_CityPorteña from '../../assets/Grafidolar_CityPorteña.png'
 function HomeText() {
   return (
@@ -6,26 +11,21 @@ function HomeText() {
     <Row className="px-4 my-5">
       <Col sm={7}>
 {
-        <Image
-        src="https://grafidolar-restapi.herokuapp.com/static/images/Grafidolar_CityPorteña.png"
-        fluid
-        rounded
-        className=""
-        />
+        <Suspense fallback={
+          <div>Cargando...</div>
+        }>
+       <MainTextImage />
+       </Suspense>
  }
       </Col>
+      
       <Col sm={5}>
         <h1>¿Qué ofrece Grafidolar?</h1>
         <p>Cotizaciones del dólar actualizadas periódicamente. 
           Gráficos para observar la evolución del valor en los últimos días.</p>
       </Col>
       </Row>
-      <br></br>
-        <blockquote className="blockquote mb-0">
-          <p>
-          </p>
-          <br></br>
-        </blockquote>
+      
      
       </Container>
   );

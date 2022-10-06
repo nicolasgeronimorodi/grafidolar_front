@@ -1,14 +1,4 @@
-/*
-const LineChart = lazy(() => import('recharts').then(module => ({ default: module.LineChart })));
-//const ResponsiveContainer = lazy(() => import('recharts').then(module => ({ default: module.ResponsiveContainer })));
-const Line = lazy(() => import('recharts').then(module => ({ default: module.Line })));
-const XAxis = lazy(() => import('recharts').then(module => ({ default: module.XAxis })));
-const YAxis = lazy(() => import('recharts').then(module => ({ default: module.YAxis })));
-const CartesianGrid = lazy(() => import('recharts').then(module => ({ default: module.CartesianGrid })));
-const Tooltip = lazy(() => import('recharts').then(module => ({ default: module.Tooltip })));
-//const ReferenceLine = lazy(() => import('recharts').then(module => ({ default: module.ReferenceLine })));
 
-*/
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer} from 'recharts';
 import {useState, useEffect} from "react";
 import axios from "axios";
@@ -111,9 +101,9 @@ controller.abort()
 />
 
      ):(
-        <ResponsiveContainer width="95%" height="80%">
+        <ResponsiveContainer width="100%" height="100%">
         <LineChart  data={dataDecimatedByDate}>
-        <Line type="monotone" dataKey="precio" stroke="#8884d8" strokeWidth={3} dot={false} />
+        <Line type="monotone" dataKey="precio" stroke="#055309" strokeWidth={4} dot={false} />
         <CartesianGrid stroke="#ccc" />
        
         <XAxis  dataKey="x" scale="time" type="number" tickFormatter={formatDateZone} domain={["dataMin", "dataMax"]}  />

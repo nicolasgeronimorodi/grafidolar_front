@@ -30,7 +30,7 @@ src={Grafidolar_Header}
   />
 </NavLink></li>
 <li><NavLink className="hoverable" to={"/"}> <img src={house_door_fill} width={20} height={20}/> </NavLink></li>
-<li><NavLink className="hoverable"to="/about">Más info</NavLink></li>
+<li><NavLink className="hoverable"to="/about">Info</NavLink></li>
 </ul>
 </Nav>
 <Routes>

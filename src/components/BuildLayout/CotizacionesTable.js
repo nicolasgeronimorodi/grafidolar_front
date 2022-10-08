@@ -13,10 +13,10 @@ useEffect ( () => {
     const controller=new AbortController();
     try{
       const {data: response} = await axios.get("https://www.dolarsi.com/api/api.php?type=valoresprincipales",   {signal: controller.signal});
-      console.log(response+ " response del get")
+      //console.log(response+ " response del get")
       const skimmedResponse=response.filter( e=> e.casa.nombre!=='Dolar Soja' && e.casa.nombre!=='Bitcoin' && e.casa.nombre!=='Dolar turista' && e.casa.nombre!=='Dolar' && e.casa.nombre!=='Argentina')
       setCotizaciones(skimmedResponse);
-     console.log("cotizacion updateado "+ new Date().toUTCString())
+     //console.log("cotizacion updateado "+ new Date().toUTCString())
       }catch(error){
           console.error(error.message);
       }

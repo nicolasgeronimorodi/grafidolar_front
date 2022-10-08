@@ -1,6 +1,6 @@
 
 
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer} from 'recharts';
+import { AreaChart, Area, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer} from 'recharts';
 import {useState, useEffect} from "react";
 import axios from "axios";
 import moment from 'moment';
@@ -103,14 +103,24 @@ const RechartsDolarCCL=()=>{
 />
          ):(
             <ResponsiveContainer width="100%" height="100%">
-            <LineChart  data={dataDecimatedByDate}>
-            <Line type="monotone" dataKey="precio" stroke="#055309" strokeWidth={3} dot={false} />
-            <CartesianGrid stroke="#ccc" />
-           
-            <XAxis  dataKey="x" scale="time" type="number" tickFormatter={formatDateZone} domain={["dataMin", "dataMax"]}  />
-            <YAxis domain={[100, 500]} />
-            <Tooltip labelFormatter={formatDateZone} />
-          </LineChart>
+
+<AreaChart data={dataDecimatedByDate} margin={{
+    top: 10, right: 10, bottom: 10, left: -22,
+  }}>
+    <defs>
+    <linearGradient id="colorCCL" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="10%" stopColor="#b32209" stopOpacity={0.8}/>
+    <stop offset="90%" stopColor="#b32209" stopOpacity={0.4}/>
+    </linearGradient>
+    </defs>
+    <Area type="monotone" dataKey="precio" stroke="#c4380e" fillOpacity={1} fill="url(#colorCCL)" strokeWidth={2} dot={false}/>
+    <CartesianGrid stroke="#ebe8e8" />
+
+    <XAxis  dataKey="x" scale="time" type="number" tickFormatter={formatDateZone} domain={["dataMin", "dataMax"]}  />
+    <YAxis domain={[200, 400]} />
+    <Tooltip labelFormatter={formatDateZone} cursor={true} offset={50} allowEscapeViewBox={{ y: true }}/>
+</AreaChart>  
+         
           </ResponsiveContainer>
           )
         }

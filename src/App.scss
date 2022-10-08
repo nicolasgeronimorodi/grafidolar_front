@@ -25,6 +25,11 @@ min-height: calc(100% - 24px);
 }
 */
 
+.alinearCentro{
+ display: flex;
+ align-items: center;
+}
+
 .themeColors{
   background-color: $color
   }
@@ -66,36 +71,18 @@ display: inline-block;
 }
 
 .hoverable:hover{
-  background-color: black;
+  background-color: #1d1c18;
   border-bottom: solid 4px rgb(184, 75, 12)
 }
 
 
 
-
-
-
-
-.footer{
-  color: black;
-  background: rgb(255, 255, 255);
-  text-align: center;
-
-}
-.footer--pin {
-  position: relative;
-  left: 0;
-  bottom: 0;
- 
-           /* Footer height */
-}
-
-
 .chartContainer {
     max-width: 100%;
-    width: 80vw;
+    width: 85vw;
     height: 500px; ;
     align-items: stretch;
+    margin-left: 0%;
 } 
 
 td{
@@ -137,7 +124,7 @@ thead{
   
   .nav-tabs .nav-link.active {
     //border-bottom: solid 4px #055309 !important;
-    background-color: #055309 !important;
+    background-color: #022e10 !important;
    
   }
 

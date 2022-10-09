@@ -10,7 +10,7 @@ return (
 <Card.Img />
 <Card.Body>
 <Card.Title>
-<h1 className='headerDiv'>¿Qué es Grafidolar?</h1>
+<h1 className='textHeader'>¿Qué es Grafidolar?</h1>
 </Card.Title>
 <Card.Text>
     

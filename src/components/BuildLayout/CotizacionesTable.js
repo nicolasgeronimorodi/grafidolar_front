@@ -37,7 +37,7 @@ return (
     <Container fluid>
     <br></br>
       <div className="headerDiv">
-        <h3>Cotizaciones</h3>
+        <h2>Obtené las cotizaciones actualizadas</h2>
       </div>
       <br></br>
     <Table striped bordered hover size="sm">

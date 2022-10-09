@@ -22,7 +22,7 @@ return (
 <Container fluid >
   <br></br>
   <div className='headerDiv'>
-    <h3>Gráficos</h3>
+    <h3>Seleccioná un tipo de dólar para ver su evolución en los últimos días</h3>
   </div>
   <br></br>
      <Table>

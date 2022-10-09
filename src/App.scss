@@ -47,6 +47,7 @@ body{
   margin: 0;
   padding: 0;
   font-family: "Figtree";
+  background-color: #ebecf1;
 }
 
 ul.siteheader li {
@@ -71,7 +72,7 @@ display: inline-block;
 }
 
 .hoverable:hover{
-  background-color: #1d1c18;
+  background-color: #412e57;
   border-bottom: solid 4px rgb(184, 75, 12)
 }
 
@@ -86,7 +87,8 @@ display: inline-block;
 } 
 
 td{
-    text-align: center
+    text-align: center;
+    font-size: 18px;
 }
 
 
@@ -97,8 +99,8 @@ thead{
 .headerDiv{
   width: 100%;
   text-align: center;
-  color:white;
-  background-color: #1d1c18;
+  color:rgb(5, 5, 5);
+  //background-color: #b4c3e2;
 }
 
 .tableHeader{
@@ -120,6 +122,8 @@ thead{
     border-top: none !important;
     border-left: none !important;
     border-right: none !important;
+    //border-bottom: 2px solid #412e57 !important;
+    border: 2px outset #3f3e41 !important;
   }
   
   .nav-tabs .nav-link.active {
@@ -129,15 +133,43 @@ thead{
   }
 
   .nav-tabs .nav-link:hover {
+    background-color: $color !important;
     border-bottom: solid 4px rgb(184, 75, 12) !important;
    
     
   }
 
+  
+  
+
+  .nav-tabs li a{
+    transition: all 0.5s ease 0s;
+  }
+
+  
+  .nav-pills .nav-link{
+    color: $color
+  }
+  .nav-pills .nav-link:hover{
+    border-bottom: solid 4px rgb(184, 75, 12) !important;
+   
+  }
+
+  
+  .nav-pills .nav-link.active{
+    background-color: $color;
+  }
   .optionsTab{
 
     font-size: 30px;
+    gap: 2px;
+   
+    border: 1px solid #412e57 !important; 
+
   }
+
+
+
   
 .chartContainer{
   padding: 0;

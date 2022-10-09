@@ -16,6 +16,7 @@ return (
 <div>
 
 <Suspense fallback={<div></div>}><HomeText /></Suspense>
+<hr class="solid"></hr>
 <Suspense fallback={<div></div>}> <MainOptions /></Suspense>
 </div>
 </main>

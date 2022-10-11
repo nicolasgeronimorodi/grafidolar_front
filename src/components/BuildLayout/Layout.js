@@ -13,7 +13,7 @@ import Grafidolar_Header from '../../assets/Grafidolar_Header.svg'
 import house_door_fill from '../../assets/house-door-fill.svg'
 
 
-//import Grafido from '../../assets/Header_GRAFIDOLAR.svg'
+
 
 function Layout(){
 

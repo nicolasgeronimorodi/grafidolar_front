@@ -15,9 +15,12 @@ return (
 <main >
 <div>
 
-<Suspense fallback={<div></div>}><HomeText /></Suspense>
+<Suspense fallback={<div>Cargando...</div>}><HomeText /></Suspense>
 <hr class="solid"></hr>
-<Suspense fallback={<div></div>}> <MainOptions /></Suspense>
+
+<Suspense fallback={<div>Cargando...</div>}> <MainOptions /></Suspense>
+
+
 </div>
 </main>
 </>

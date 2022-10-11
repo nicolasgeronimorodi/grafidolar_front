@@ -1,29 +1,18 @@
 @import "./scss/_config";
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Figtree&display=swap');
 
 @import "~bootstrap/scss/bootstrap";
 
 
 
-//$color: #055309 ;
-$color: #01200b;
-$font-family-sans-serif: "Archivo Black", "Figtree";
+
+$MainColor: #01200b;
+$InteractionColor: #2e203f;
+$BorderInteractionColor: solid 4px rgb(184, 75, 12);
+$font-family-sans-serif:  "Figtree", "Roboto";
 
 
-/*
-#page-container{
-  position: relative;
-  min-height: 100vh;
-}*/
-
-
-
-/*
-.content-container{
-min-height: calc(100% - 24px);
-}
-*/
 
 .alinearCentro{
  display: flex;
@@ -31,7 +20,7 @@ min-height: calc(100% - 24px);
 }
 
 .themeColors{
-  background-color: $color
+  background-color: $MainColor
   }
   
 .headerFont{
@@ -43,13 +32,17 @@ min-height: calc(100% - 24px);
 
 
 
-
 body{
   margin: 0;
   padding: 0;
   font-family: "Figtree";
   background-color: #ebecf1;
+  
+  scroll-behavior: smooth;
+  //-webkit-overflow-scrolling: touch
 }
+
+
 
 ul.siteheader li {
   display: inline;
@@ -59,7 +52,7 @@ ul.siteheader li {
   }
 
 ul.siteheader{
-  background-color: $color;
+  background-color: $MainColor;
   padding: 0;
   width: 100%;
 }
@@ -73,7 +66,7 @@ display: inline-block;
 }
 
 .hoverable:hover{
-  background-color: #412e57;
+  background-color: $InteractionColor;
   border-bottom: solid 4px rgb(184, 75, 12)
 }
 
@@ -91,7 +84,7 @@ font-size: 20px;
 .chartContainer {
     max-width: 100%;
     width: 85vw;
-    height: 500px; ;
+    height: 300px; ;
     align-items: stretch;
     margin-left: 0%;
 } 
@@ -140,13 +133,13 @@ thead{
   
   .nav-tabs .nav-link.active {
     //border-bottom: solid 4px #055309 !important;
-    background-color: #022e10 !important;
+    background-color: $InteractionColor !important;
    
   }
 
   .nav-tabs .nav-link:hover {
-    background-color: $color !important;
-    border-bottom: solid 4px rgb(184, 75, 12) !important;
+    background-color: $InteractionColor !important;
+    border-bottom: solid 4px $BorderInteractionColor !important;
    
     
   }
@@ -160,7 +153,7 @@ thead{
 
   
   .nav-pills .nav-link{
-    color: $color
+    color: $MainColor
   }
   .nav-pills .nav-link:hover{
     border-bottom: solid 4px rgb(184, 75, 12) !important;
@@ -169,7 +162,7 @@ thead{
 
   
   .nav-pills .nav-link.active{
-    background-color: $color;
+    background-color: $MainColor;
   }
   .optionsTab{
 

@@ -1,5 +1,5 @@
-import {Container, Row, Col, Card} from 'react-bootstrap/';
-import { Link } from 'react-router-dom';
+import {Container, Card} from 'react-bootstrap/';
+
 import React from 'react';
 export default function About(){
 
@@ -13,8 +13,10 @@ return (
 <h1 className='textHeader'>¿Qué es Grafidolar?</h1>
 </Card.Title>
 <Card.Text>
-    
-Esencialmente, Grafidolar es un proyecto de aprendizaje de desarrollo web. Lo que hace es muy sencillo. Recoge cuatro cotizaciones del dólar día a día y procesa los datos de modo que puede mostrar gráficamente su evolución en los últimos 5 días. Utiliza Express, las librerías React y Recharts, entre otras. Para contactarme, me podés seguir en <a
+<p >
+Esencialmente, Grafidolar es un proyecto de aprendizaje de desarrollo web full-stack. Recoge cuatro cotizaciones del dólar día a día, almacena y procesa los datos de modo que muestra gráficamente su evolución en los últimos 7 días. 
+</p>
+<p> Utiliza Express, las librerías React y Recharts, entre otras. La idea a futuro es escalar el sitio con nuevas características. Para contactarme, me podés seguir en <a
           class='social-icon-link github'
           href="https://linkedin.com/in/nicolasrodi"
           target='_blank'
@@ -28,7 +30,7 @@ Esencialmente, Grafidolar es un proyecto de aprendizaje de desarrollo web. Lo qu
         aria-label='Github'
       > GitHub
       </a>.
-
+      </p>
 </Card.Text>
 </Card.Body>
 

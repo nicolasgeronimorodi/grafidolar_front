@@ -4,7 +4,7 @@ import {useState, useEffect} from "react";
 import axios from "axios";
 import moment from 'moment';
 import 'moment-timezone'
-import { TailSpin } from 'react-loader-spinner';
+
 const RechartsDolarOficial=()=>{
 
     var days=86400000 
@@ -76,7 +76,6 @@ useEffect( ()=>
 fetchAPI();
 setIsLoading(false);
 
-
 return ()=>{
 controller.abort()
 };
@@ -88,17 +87,10 @@ controller.abort()
     {
      isLoading ? (
                 
-<TailSpin
-  height="80"
-  width="80"
-  color="#4fa94d"
-  ariaLabel="tail-spin-loading"
-  radius="1"
-  wrapperStyle={{}}
-  wrapperClass=""
-  visible={true}
-/>
+<div>Cargando...</div>
      ):(
+
+
 <ResponsiveContainer width="100%" height="100%">
 <AreaChart data={dataDecimatedByDate}  margin={{
     top: 10, right: 10, bottom: 10, left: -22,
@@ -116,9 +108,10 @@ controller.abort()
        
 <XAxis  dataKey="x" scale="time" type="number" tickFormatter={formatDateZone} domain={["dataMin", "dataMax"]}  />
 <YAxis domain={[100, 200]} />
-<Tooltip labelFormatter={formatDateZone} cursor={true} offset={50} allowEscapeViewBox={{ y: true }}/>
+<Tooltip labelFormatter={formatDateZone} cursor={true} offset={50} allowEscapeViewBox={{ y: true, x:false }}/>
 </AreaChart>
 </ResponsiveContainer>
+
       )
     }
       

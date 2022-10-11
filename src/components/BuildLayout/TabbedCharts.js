@@ -1,4 +1,4 @@
-import { React, lazy, Suspense } from 'react'
+import { React, lazy, Suspense, useEffect } from 'react'
 
 
 import {Tab, Tabs, Container, Table} from 'react-bootstrap'
@@ -14,6 +14,16 @@ const RechartsDolarBolsa = lazy( ()=> import('./RechartsCharts/RechartsDolarBols
 
 
 function TabbedCharts() {
+  function HandleClick(e){
+    e.preventDefault();
+    e.stopImmediatePropagation();
+ }
+
+ useEffect(()=>  {
+  if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual"
+    }
+},[]);
 
 return (
  
@@ -29,48 +39,48 @@ return (
        <tbody>
      
      <Tabs fill
-       defaultActiveKey="Dolar Blue"
+      
        //id="uncontrolled-tab-example"
        className="mb-3"
 
      >
-       <Tab eventKey="Dolar Oficial" title="Dólar Oficial">
+       <Tab eventKey="Dolar Oficial" title="Dólar Oficial" onClick={HandleClick}>
          
 
            <div  className='chartContainer' style={{ position: "relative"}} >
              
-           <Suspense fallback={<div></div>}><RechartsDolarOficial tipo="Dolar Oficial"/></Suspense>
+           <Suspense fallback={<div>Cargando...</div>}><RechartsDolarOficial tipo="Dolar Oficial"/></Suspense>
             
            </div>
            </Tab>
          
 
       
-       <Tab eventKey="Dolar Blue" title="Dólar Blue">
+       <Tab eventKey="Dolar Blue" title="Dólar Blue" onClick={HandleClick}>
         
            <div className='chartContainer' style={{ position: "relative"}} >
           
-            <Suspense fallback={<div></div>}> <RechartsDolarBlue /></Suspense>
+            <Suspense fallback={<div>Cargando..</div>}> <RechartsDolarBlue /></Suspense>
            
            </div>
         
        </Tab>
-       <Tab eventKey="Dolar Contado con Liquidacion" title="Dólar Contado con Liquidación">
+       <Tab eventKey="Dolar Contado con Liquidacion" title="Dólar Contado con Liquidación" onClick={HandleClick}>
          
            <div  className='chartContainer' style={{ position: "relative"}} >
            
            
-             <Suspense><RechartsDolarCCL /></Suspense>
+             <Suspense fallback={<div>Cargando...</div>}><RechartsDolarCCL /></Suspense>
             
            </div>
          
        </Tab>
 
-       <Tab eventKey="Dolar Bolsa" title="Dólar Bolsa" >
+       <Tab eventKey="Dolar Bolsa" title="Dólar Bolsa" onClick={HandleClick} >
         
            <div className='chartContainer' style={{ position: "relative"}} >
            
-             <Suspense><RechartsDolarBolsa /></Suspense>
+             <Suspense fallback={<div>Cargando...</div>}><RechartsDolarBolsa /></Suspense>
             
            </div>
 
